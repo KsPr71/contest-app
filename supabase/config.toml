@@ -1,0 +1,7 @@
+project_id = "contest-app"
+
+[auth]
+enable_anonymous_sign_ins = true
+
+[functions.publish-vote-totals]
+verify_jwt = false

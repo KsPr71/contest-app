@@ -1,0 +1,88 @@
+.slot-counter {
+  --slot-cell: 1.4em;
+  --slot-ease: cubic-bezier(0.15, 0.85, 0.35, 1.08);
+  --slot-frame: #412402;
+  --slot-border: #ba7517;
+  --slot-reel-bg: #faeeda;
+  --slot-reel-border: #633806;
+  --slot-ink: #412402;
+  --slot-payline: #e24b4a;
+
+  display: inline-flex;
+  gap: 0.15em;
+  padding: 0.25em 0.3em;
+  font-size: var(--slot-size, 3rem);
+  font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  background: var(--slot-frame);
+  border: 0.06em solid var(--slot-border);
+  border-radius: 0.3em;
+  box-shadow:
+    inset 0 0.06em 0.2em rgb(0 0 0 / 0.5),
+    0 0.08em 0.25em rgb(0 0 0 / 0.35);
+}
+
+.slot-reel {
+  position: relative;
+  width: 1em;
+  height: var(--slot-cell);
+  overflow: hidden;
+  background: var(--slot-reel-bg);
+  border: 0.04em solid var(--slot-reel-border);
+  border-radius: 0.15em;
+  color: var(--slot-ink);
+}
+
+/* Sombra curva arriba y abajo: da sensación de cilindro */
+.slot-reel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0.45) 0%,
+    rgb(0 0 0 / 0) 28%,
+    rgb(255 255 255 / 0.15) 50%,
+    rgb(0 0 0 / 0) 72%,
+    rgb(0 0 0 / 0.45) 100%
+  );
+}
+
+/* Línea de premio */
+.slot-reel::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 0.03em;
+  z-index: 2;
+  background: var(--slot-payline);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.slot-reel.is-muted { color: var(--slot-muted-ink, #a1a79d); }
+
+.slot-strip {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.slot-digit {
+  display: block;
+  height: var(--slot-cell);
+  line-height: var(--slot-cell);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* 1ms para que transitionend siga disparándose y el rodillo se normalice */
+  .slot-strip {
+    transition-duration: 1ms !important;
+  }
+}

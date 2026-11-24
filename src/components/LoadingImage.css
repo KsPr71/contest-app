@@ -1,0 +1,8 @@
+.loading-image { display:block; position:relative; width:100%; height:100%; overflow:hidden; background:#e8ecdf; }
+.loading-image img { opacity:0; transition:opacity .25s ease; }
+.loading-image.is-ready img { opacity:1; }
+.image-skeleton { position:absolute; inset:0; background:#e8ecdf; overflow:hidden; pointer-events:none; }
+.image-skeleton::after { content:''; position:absolute; inset:0; background:linear-gradient(100deg,transparent 20%,#f7f8f499 50%,transparent 80%); transform:translateX(-100%); animation:image-shimmer 1.6s ease-in-out infinite; }
+.image-fallback { position:absolute; inset:0; display:grid; place-items:center; padding:24px; color:#59664f; font-size:1rem; text-align:center; }
+@keyframes image-shimmer { to { transform:translateX(100%); } }
+@media(prefers-reduced-motion:reduce) { .image-skeleton::after { animation:none; } .loading-image img { transition:none; } }

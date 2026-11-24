@@ -1,0 +1,27 @@
+.admin-shell { max-width: 1100px; margin: auto; padding: 24px; }
+.admin-header { display:flex; align-items:center; gap:24px; border-bottom:1px solid #ddd; padding-bottom:22px; }
+.admin-header .brand { margin-right:auto; }
+.admin-shell main { padding-top:40px; }
+.admin-shell h1 { font-size:clamp(2rem,5vw,3.5rem); margin:12px 0 24px; }
+.admin-panel { background:#fff; border:1px solid #e3e1db; border-radius:16px; padding:28px; margin:24px 0; }
+.admin-panel h2 { margin-top:0; }
+.admin-panel p { line-height:1.6; }
+.admin-panel label { display:grid; gap:8px; margin:18px 0; font-weight:600; }
+.admin-panel input, .admin-panel textarea { width:100%; min-width:0; box-sizing:border-box; border:1px solid #bcbcb4; padding:12px; border-radius:8px; background:#fafaf7; font:inherit; }
+.admin-panel textarea { min-height:100px; resize:vertical; }
+.admin-panel fieldset { border:0; margin:0; padding:0; min-width:0; }
+.admin-shell button { cursor:pointer; border-radius:8px; padding:10px 16px; border:1px solid #d4d4cb; }
+.admin-shell button:disabled { cursor:wait; opacity:.55; }
+.admin-shell .primary { background:#253f35; color:#fff; margin-right:12px; }
+.admin-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.login { max-width:480px; }
+.upload-preview { display:flex; align-items:center; gap:24px; padding:16px 0; }
+.upload-preview img { width:140px; max-height:160px; object-fit:contain; }
+.admin-photo { display:flex; flex-wrap:wrap; align-items:center; gap:20px; border-top:1px solid #eee; padding:20px 0; }
+.admin-photo img { flex-shrink:0; object-fit:cover; border-radius:6px; }
+.admin-photo > div { flex:1; min-width:0; overflow-wrap:anywhere; }
+.admin-photo h3 { margin:0; }
+.admin-photo > .admin-actions { display:flex; flex:0 0 auto; flex-wrap:wrap; align-items:center; gap:8px; max-width:100%; overflow-wrap:normal; }
+.admin-actions button { flex:0 0 auto; min-width:96px; min-height:44px; padding:10px 18px; line-height:1.25; white-space:nowrap; }
+.admin-edit { border-top:1px solid #ddd; padding-top:24px; }
+@media(max-width:600px) { .admin-shell { padding:16px; } .admin-header { gap:12px; flex-wrap:wrap; } .admin-panel { padding:18px; } .admin-grid { grid-template-columns:1fr; gap:0; } .admin-photo > .admin-actions { flex-basis:100%; } .admin-actions button { flex:1 1 96px; } .upload-preview { flex-wrap:wrap; } }

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "city",
+    "originalBytes": 159256,
+    "thumb": {
+      "width": 360,
+      "height": 480,
+      "bytes": 17386
+    },
+    "full": {
+      "width": 900,
+      "height": 1200,
+      "bytes": 151352
+    }
+  },
+  {
+    "id": "light",
+    "originalBytes": 41973,
+    "thumb": {
+      "width": 480,
+      "height": 320,
+      "bytes": 3702
+    },
+    "full": {
+      "width": 1200,
+      "height": 800,
+      "bytes": 22542
+    }
+  },
+  {
+    "id": "mountain",
+    "originalBytes": 189405,
+    "thumb": {
+      "width": 480,
+      "height": 360,
+      "bytes": 19704
+    },
+    "full": {
+      "width": 1200,
+      "height": 900,
+      "bytes": 194742
+    }
+  },
+  {
+    "id": "travel",
+    "originalBytes": 73449,
+    "thumb": {
+      "width": 480,
+      "height": 349,
+      "bytes": 10626
+    },
+    "full": {
+      "width": 1100,
+      "height": 800,
+      "bytes": 52052
+    }
+  }
+]
