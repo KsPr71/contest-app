@@ -1,0 +1,24 @@
+.photo-share { flex-shrink:0; }
+.share-trigger { display:grid; place-items:center; width:32px; height:32px; padding:0; background:transparent; color:#73806b; }
+.share-trigger svg { width:16px; height:16px; }
+.share-trigger:hover { color:#304b39; }
+.photo-card-heading-row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.photo-card-heading-row h3 { flex:1; min-width:0; }
+.share-dialog { width:min(360px, calc(100vw - 32px)); max-height:85dvh; padding:20px; border:1px solid #dce1d6; border-radius:14px; background:#f7f8f4; color:#283b30; box-shadow:0 16px 60px #0003; }
+.share-dialog::backdrop { background:#10211799; }
+.share-dialog-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.share-dialog-heading h2 { font-size:1.25rem; letter-spacing:normal; }
+.share-dialog-heading button { width:40px; height:40px; flex-shrink:0; border-radius:50%; font-size:26px; background:#e8ecdf; }
+.share-dialog p { font-size:1rem; line-height:1.5; overflow-wrap:anywhere; }
+.share-options { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px; }
+.share-options a, .share-options button { display:flex; align-items:center; justify-content:center; width:36px; height:36px; padding:8px; background:transparent; border-radius:6px; color:#59664f; }
+.share-options svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.share-options a:hover, .share-options button:hover { background:#e8ecdf; color:#304b39; }
+.share-dialog input { width:100%; margin-top:14px; padding:10px; font-size:1rem; }
+.share-dialog .share-feedback { margin:12px 0 0; font-size:.875rem; color:#52614b; }
+.share-feedback:empty { display:none; }
+.share-image-preview { display:block; width:100%; max-height:58dvh; object-fit:contain; margin:16px 0 10px; border-radius:6px; }
+.share-publication { display:grid; gap:8px; font-size:.875rem; font-weight:600; }
+.share-publication textarea { width:100%; min-height:190px; resize:vertical; padding:12px; border:1px solid #cbd4c1; border-radius:8px; font:inherit; font-weight:400; line-height:1.5; color:#283b30; background:#fff; }
+.share-dialog .share-instructions { font-size:.8125rem; color:#59664f; }
+.share-copy-publication { width:100%; min-height:44px; padding:10px; margin-bottom:12px; background:#304b39; color:#fff; border-radius:6px; font-size:.875rem; }

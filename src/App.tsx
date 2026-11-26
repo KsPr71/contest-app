@@ -5,6 +5,7 @@ import './App.css'
 import navidad from './assets/navidad.svg'
 import LoadingImage from './components/LoadingImage'
 import PhotoCard from './components/PhotoCard'
+import SharePhoto from './components/SharePhoto'
 import sampleImages from './data/sample-images.json'
 import { useContest } from './hooks/useContest'
 import { useVotingPeriod } from './hooks/useVotingPeriod'
@@ -195,7 +196,7 @@ export default function App() {
       {selected && <>
         <button className="close" aria-label="Cerrar fotografía" onClick={() => setSelected(null)}>×</button>
         <LoadingImage crossOrigin="anonymous" src={selected.fullSrc} alt={selected.alt} />
-        <div className="photo-info"><div><h2 id="photo-title">{selected.title}</h2><p>{selected.category}</p></div><span>{selected.fullWidth} × {selected.fullHeight} px</span></div>
+        <div className="photo-info"><div><h2 id="photo-title">{selected.title}</h2><p>{selected.category}</p></div><SharePhoto photo={selected} /><span>{selected.fullWidth} × {selected.fullHeight} px</span></div>
       </>}
     </dialog>
   </div>

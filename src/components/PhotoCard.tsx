@@ -3,6 +3,7 @@ import type { Entry } from '../types/photo'
 import type { Totals } from '../lib/totals'
 import SlotCounter from './SlotCounter'
 import LoadingImage from './LoadingImage'
+import SharePhoto from './SharePhoto'
 import './PhotoCard.css'
 
 type Props = {
@@ -44,7 +45,7 @@ export default function PhotoCard({ photo, width, height, score, priority, total
       <div className="photo-card-body">
         <div className="photo-card-meta">
           <div className="photo-card-heading">
-            <h3 id={`title-${photo.id}`}>{photo.title}</h3>
+            <div className="photo-card-heading-row"><h3 id={`title-${photo.id}`}>{photo.title}</h3><SharePhoto photo={photo} /></div>
             <p className="photo-card-description">{photo.description}</p>
           </div>
 
